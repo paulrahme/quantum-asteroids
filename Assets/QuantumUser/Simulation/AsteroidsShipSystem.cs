@@ -14,9 +14,34 @@ namespace Quantum.Asteroids
             public PhysicsBody2D* Body;
         }
 
-        public override void Update(Frame f, ref Filter filter)
+        public override void Update(Frame frame, ref Filter filter)
         {
-            filter.Body->AddForce(filter.Transform->Up);
+            var input = frame.GetPlayerInput(0);
+
+            UpdateShipMovement(frame, ref filter, input);
+        }
+
+        private void UpdateShipMovement(Frame frame, ref Filter filter, Input* input)
+        {
+            FP shipAcceleration = 7;
+            FP turnSpeed = 8;
+
+            if (input->Up)
+            {
+                filter.Body->AddForce(filter.Transform->Up * shipAcceleration);
+            }
+
+            if (input->Left)
+            {
+                filter.Body->AddTorque(turnSpeed);
+            }
+
+            if (input->Right)
+            {
+                filter.Body->AddTorque(-turnSpeed);
+            }
+
+            filter.Body->AngularVelocity = FPMath.Clamp(filter.Body->AngularVelocity, -turnSpeed, turnSpeed);
         }
     }
 }

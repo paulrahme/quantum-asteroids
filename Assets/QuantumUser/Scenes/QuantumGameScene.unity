@@ -1227,8 +1227,12 @@ MonoBehaviour:
         Value: 475015563823742203
   UseRandomSeed: 0
   SessionConfig: {fileID: 0}
-  LocalPlayers: []
-  MaxPlayerCount: 0
+  LocalPlayers:
+  - PlayerAvatar:
+      Id:
+        Value: 0
+    PlayerNickname: 
+  MaxPlayerCount: 1
   SimulationSpeedMultiplier: 1
   DisplaySaveAndReloadButton: 0
   PreloadAddressables: 0
@@ -1298,26 +1302,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2084514955}
-  - component: {fileID: 2084514954}
+  - component: {fileID: 2084514956}
   m_Layer: 0
-  m_Name: QuantumDebugInput
+  m_Name: QuantumLocalInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2084514954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084514953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d80a0dde3922e0f47b2e12ce66a4cfdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Quantum.Unity::Quantum.QuantumDebugInput
 --- !u!4 &2084514955
 Transform:
   m_ObjectHideFlags: 0
@@ -1333,6 +1325,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2084514956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084514953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411d235a8266b02469160e36795dca3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Quantum.Asteroids.AsteroidsInput
 --- !u!1001 &7647435816621318449
 PrefabInstance:
   m_ObjectHideFlags: 0
