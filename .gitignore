@@ -61,6 +61,9 @@ ExportedObj/
 # Unity3D generated file on crash reports
 sysinfo.txt
 
+# Rider
+.idea/
+
 # Builds
 *.apk
 *.aab
@@ -82,10 +85,3 @@ Assets/AddressableAssetsData/link.xml*
 # files in platform-specific subfolders, for example:
 # /Assets/AddressableAssetsData/OSX/addressables_content_state.bin
 Assets/AddressableAssetsData/*/*.bin*
-
-# Visual Scripting auto-generated files
-Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db*
-Assets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers*
-
-# PlayMaker
-Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset*
